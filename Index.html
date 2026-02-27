@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SkyCast Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" class="min-h-screen bg-gradient-to-br from-blue-400 to-indigo-700 transition-all duration-700">
+
+<div class="container mx-auto p-4">
+
+    <!-- HEADER -->
+    <h1 class="text-3xl md:text-4xl text-white font-bold text-center mb-6">
+        🌦 SkyCast Pro
+    </h1>
+
+    <!-- SEARCH SECTION -->
+    <div class="glass p-4 rounded-xl flex flex-col md:flex-row gap-3 justify-center items-center">
+
+        <input id="cityInput"
+               type="text"
+               placeholder="Enter city name..."
+               class="px-4 py-2 rounded w-full md:w-1/3 outline-none text-black">
+
+        <button id="searchBtn"
+                class="bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded">
+            Search
+        </button>
+
+        <button id="locationBtn"
+                class="bg-green-600 hover:bg-green-800 text-white px-4 py-2 rounded">
+            Use My Location
+        </button>
+
+        <!-- Recent Dropdown -->
+        <select id="recentCities"
+                class="hidden px-3 py-2 rounded text-black">
+        </select>
+
+        <!-- Toggle -->
+        <button id="unitToggle"
+                class="bg-yellow-500 hover:bg-yellow-600 px-3 py-2 rounded">
+            °F
+        </button>
+
+    </div>
+
+    <!-- ERROR MESSAGE -->
+    <div id="errorBox"
+         class="hidden mt-4 p-3 bg-red-500 text-white rounded text-center">
+    </div>
+
+    <!-- TODAY WEATHER -->
+    <div id="todayWeather"
+         class="glass mt-6 p-6 rounded-xl text-white text-center">
+    </div>
+
+    <!-- 5 DAY FORECAST -->
+    <div id="forecast"
+         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 mt-6">
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
